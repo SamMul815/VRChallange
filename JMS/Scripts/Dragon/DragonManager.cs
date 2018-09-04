@@ -29,7 +29,7 @@ namespace DragonController
         IEnumerator _dragonAiCor;
         
         bool _isInit;
-
+         
         private void Awake()
         {
             _stat = GetComponent<DragonStat>();
@@ -42,17 +42,12 @@ namespace DragonController
         // Use this for initialization
         void Start ()
         {
-
             if (Application.isPlaying)
             {
                 CoroutineManager.DoCoroutine(_dragonAiCor);
                 _isInit = true;
-
             }
-		
 	    }
-
-
 
         public bool IsFindNode(MOVEMENTTYPE Type)
         {

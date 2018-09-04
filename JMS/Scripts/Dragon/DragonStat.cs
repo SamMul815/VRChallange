@@ -27,9 +27,39 @@ namespace DragonController {
         private float _hp;
         public float HP { set { _hp = value; } get { return _hp; } }
 
+
+        [Space]
+        [Header("Boss TakeDamage")]
+
         [SerializeField]
         private float _saveTakeDamage;
         public float SaveTakeDamage { set { _saveTakeDamage = value; } get { return _saveTakeDamage; } }
+
+        [Space]
+        [Header("Boss Pattern Damage Stats")]
+        [SerializeField]
+        private float _rushDamage;
+        public float RushDamage { set { _rushDamage = value; } get { return _rushDamage; } }
+
+        [SerializeField]
+        private float _overLapDamage;
+        public float OverLapDamage{ set { _overLapDamage = value; } get { return _overLapDamage; } }
+
+        [SerializeField]
+        private float _leftPowDamage;
+        public float LeftPowDamage { set { _leftPowDamage = value; } get { return _leftPowDamage; } }
+
+        [SerializeField] 
+        private float _rightPowDamage;
+        public float RightPowDamage { set { _rightPowDamage = value; } get { return _rightPowDamage; } }
+
+        [SerializeField]
+        private float _nearHowlingDamage;
+        public float NearHowlingDamage { set { _nearHowlingDamage = value; } get { return _nearHowlingDamage; } }
+
+        [SerializeField]
+        private float _nearBreathDamage;
+        public float NearBreathDamage { set { _nearHowlingDamage = value; } get { return _nearBreathDamage; } }
 
         [Space]
         [Header("Boss Phase HPBar Precent")]
