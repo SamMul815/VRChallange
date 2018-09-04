@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1213061089088568}
+  m_IsPrefabParent: 1
+--- !u!1 &1213061089088568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4327250908587308}
+  - component: {fileID: 114547086629730356}
+  m_Layer: 0
+  m_Name: BlackBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1740111066082800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4548664116390974}
+  - component: {fileID: 114154766537941150}
+  m_Layer: 0
+  m_Name: Clock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4327250908587308
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1213061089088568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4548664116390974}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4548664116390974
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1740111066082800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4327250908587308}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114154766537941150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1740111066082800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62895864d269c6e468b7fe67df664be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _groundTime:
+    _maxIdleTime: 2
+    _maxWalkTime: 2
+    _maxDamageAmountTime: 10
+    _preRushTime: 1
+    _runRushTime: 2
+    _afterRushTime: 0.77
+    _preNearHowlingTime: 1.2
+    _runNearHowlingTime: 2
+    _afterNearHowlingTime: 0.54
+    _preHowlingTime: 1.2
+    _runHowlingTime: 2
+    _afterHowlingTime: 0.54
+    _preOverLapTime: 1
+    _runOverLapTime: 2
+    _afterOverLapTime: 0.77
+    _curOverLapCheckTime: 0
+    _maxOverLapCheckTime: 0
+    _preFanShapeBreathTime: 0
+    _runFanShapeBreathTime: 2
+    _afterFanShapeBreathTime: 0
+    _preNearBreathTime: 1.5
+    _runNearBreathTime: 1.8
+    _afterNearBreathTime: 0.97
+    _preMortarTime: 0.5
+    _runMortarTime: 1
+    _afterMortarTime: 0.5
+    _secondAttackPreTime: 1.3
+    _secondAttackRunTime: 0.8
+    _secondAttackAfterTime: 1.7
+  _flyingTime:
+    _hoveringTime: 3
+    _flyTime: 3
+    _preHommingBulletTime: 0
+    _afterHommingBulletTime: 0
+    _preBreathTime: 2
+    _runBreathTime: 4
+    _afterBreathTime: 1.5
+    _preIceBulletTime: 0
+    _runIceBulletTime: 0
+    _afterIceBulletTime: 0
+  _fallingTime: 5
+--- !u!114 &114547086629730356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1213061089088568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc004bfe75cf6384e813726a43877e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dragonMouth: {fileID: 0}
+  _dragonPowAttacksPivot: {fileID: 0}
+  _dragonTailAttacksPivot: {fileID: 0}
+  _rushDistance: 60
+  _fanShapeBreathDistance: 80
+  _nearBreathDistance: 50000
+  _isOverLapAttack: 0
+  _secondAttackDistance: 30
+  _overLapMoveDistance: 30
+  _rushMoveDistance: 20
+  _isGround: 1
+  _isWalk: 0
+  _isHovering: 0
+  _isNearHowling: 0
+  _isSecondAttack: 0
+  _curIceCrystalNum: 40
+  _maxIceBulletCrystalNum: 70
+  _minIceBulletCrystalNum: 50
+  _maxHommingBulletCrystalNum: 50
+  _maxBreathCrystalNum: 40
+  _curWeakPointCount: 0
+  _maxWeakPointCount: 4
+  _isWeakPointAttack: 0
+  PlayerMaxHP: 100
+  CurPlayerHP: 70
