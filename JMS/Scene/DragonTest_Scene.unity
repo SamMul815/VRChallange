@@ -239,6 +239,76 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _nearHowlingRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _overLapRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _leftPowRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _rightPowRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _rushDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _overLapDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _leftPowDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _rightPowDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _nearHowlingDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: _nearBreathDamage
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1747204806 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1406852581926336, guid: e4213ddc35dddcd43a17a667077d8c2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 372210426}
+--- !u!114 &1747204807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1747204806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54ec82a47ca0c74a9b62243e47f582e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 0
+  hpSliderUI: {fileID: 0}
+  hpTextUI: {fileID: 0}
+  hitEffect: {fileID: 0}

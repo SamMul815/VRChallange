@@ -46,6 +46,9 @@ public class Boss_LeftPow_Attack : ActionTask
         Transform Dragon = UtilityManager.Instance.DragonTransform();
         Transform Player = UtilityManager.Instance.PlayerTransform();
 
+        float Damage = DragonManager.Stat.LeftPowDamage;
+        float Range = DragonManager.Stat.LeftPowRange;
+
         Vector3 DragonPos = Dragon.position;
         Vector3 PlayerPos = Player.position;
 
@@ -71,6 +74,10 @@ public class Boss_LeftPow_Attack : ActionTask
 
         //런 애니메이션
         DragonAniManager.SwicthAnimation("LeftPow_Atk_Run");
+
+        if (UtilityManager.DistanceCalc(Dragon, Player, Range))
+            UtilityManager.Instance.AttackPlayer(Damage);
+
         yield return new WaitForSeconds(runTime);
 
         //후딜
