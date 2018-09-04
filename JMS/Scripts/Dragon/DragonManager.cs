@@ -72,11 +72,11 @@ namespace DragonController
             return false;
         }
 
-        public void Hit(float Damege)
+        public void Hit(float Damage)
         {
-            Stat.SaveTakeDamage += Damege;
-            Stat.HP -= Damege;
-            Debug.Log("Dragon Hit : " + Damege);
+            Stat.SaveTakeDamage += Damage;
+            Stat.HP -= Damage;
+            Debug.Log("Dragon Hit : " + Damage);
         }
         
         IEnumerator StartDragonAI()
@@ -84,6 +84,17 @@ namespace DragonController
             while (!_dragonBehaviroTree.Root.Run())
             {
                 yield return CoroutineManager.FiexdUpdate;
+            }
+        }
+
+        public void Attack(float Damage, GameObject Target)
+        {
+            if (BlackBoard.Instance.IsGroundAttacking)
+            {
+                if (Target.tag == "Player")
+                {
+                    UtilityManager.Instance.AttackPlayer(Damage);
+                }
             }
         }
 

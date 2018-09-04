@@ -41,6 +41,7 @@ public class PlayerStat : MonoBehaviour
 
         StartCoroutine(corHitEffect());
         currentHP -= damage;
+        Debug.Log(currentHP);
         isHit = true;
         hpSliderUI.value = currentHP / maxHP;
         hpTextUI.text = ((int)currentHP).ToString();

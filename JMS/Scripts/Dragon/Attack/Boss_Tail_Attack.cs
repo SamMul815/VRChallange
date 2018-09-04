@@ -60,9 +60,7 @@ public class Boss_Tail_Attack : ActionTask
         UtilityManager.Instance.ShakePlayerHowling();
 
         if (UtilityManager.DistanceCalc(Dragon, Player, Range))
-        {
             UtilityManager.Instance.AttackPlayer(Damage);
-        }
 
         yield return CoroutineManager.GetWaitForSeconds(runTime);
 

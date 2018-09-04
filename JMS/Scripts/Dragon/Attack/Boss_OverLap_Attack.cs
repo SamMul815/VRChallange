@@ -43,7 +43,6 @@ public class Boss_OverLap_Attack : ActionTask
         Transform Player = UtilityManager.Instance.PlayerTransform();
 
         float Damage = DragonManager.Stat.OverLapDamage;
-        float Range = DragonManager.Stat.OverLapRange;
 
         Vector3 DragonPos = Dragon.position;
         Vector3 PlayerPos = Player.position;
@@ -65,9 +64,6 @@ public class Boss_OverLap_Attack : ActionTask
 
         //실행 애니메이션
         DragonAniManager.SwicthAnimation("Rush_Atk_Run");
-        if (UtilityManager.DistanceCalc(Dragon, Player, Range))
-            UtilityManager.Instance.AttackPlayer(Damage);
-
         yield return CoroutineManager.GetWaitForSeconds(runTime);
 
         //후딜 애니메이션
