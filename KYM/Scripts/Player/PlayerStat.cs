@@ -14,7 +14,11 @@ public class PlayerStat : MonoBehaviour
     [SerializeField]
     private Text hpTextUI;
 
+    [SerializeField]
+    private GameObject hitEffect;
+
     private float currentHP;
+    private bool isHit;
     bool isDie = false;
 
     private void Awake()
@@ -32,14 +36,30 @@ public class PlayerStat : MonoBehaviour
 
     public void HitDamage(float damage)
     {
-        currentHP -= damage;
+        if (isHit) return;
 
+        StartCoroutine(corHitEffect());
+        currentHP -= damage;
+        isHit = true;
         hpSliderUI.value = currentHP / maxHP;
         hpTextUI.text = ((int)currentHP).ToString();
         if (currentHP <= 0)
         {
             hpTextUI.text = "0";
             isDie = true;
+        }
+    }
+
+    public bool IsDead() { return isDie; }
+
+    IEnumerator corHitEffect()
+    {
+        if (!hitEffect.activeSelf)
+        {
+            hitEffect.SetActive(true);
+            yield return new WaitForSeconds(2.0f);
+            isHit = false;
+            yield return null;
         }
     }
 

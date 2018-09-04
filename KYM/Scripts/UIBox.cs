@@ -69,6 +69,7 @@ public class UIBox : MonoBehaviour
             AsyncOperation sceneLoading = SceneManager.LoadSceneAsync(i , LoadSceneMode.Additive);
             sceneLoading.allowSceneActivation = false;
             sceneLoads.Add(sceneLoading);
+            //yield return new WaitForSeconds(5.0f);
         }
 
         bool isAllLoad = false;
@@ -102,15 +103,9 @@ public class UIBox : MonoBehaviour
             while (!sceneLoads[i].isDone) { yield return null; }
         }
 
-        //for(int i = 0; i< objects.Length; i++)
-        //{
-        //    objects[i].SetActive(false);
-        //}
-
         AsyncOperation sceneunloading = SceneManager.UnloadSceneAsync(originalScene);
         while (!sceneunloading.isDone) { yield return null; }
     }
-
 
     IEnumerator LoadAsynchronously()
     {
@@ -143,5 +138,4 @@ public class UIBox : MonoBehaviour
 
 
     }
-
 }
