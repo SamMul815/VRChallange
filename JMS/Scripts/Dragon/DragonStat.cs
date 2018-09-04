@@ -48,8 +48,8 @@ namespace DragonController {
         [SerializeField]
         private float _leftPowDamage;
         public float LeftPowDamage { set { _leftPowDamage = value; } get { return _leftPowDamage; } }
-
-        [SerializeField]
+         
+        [SerializeField] 
         private float _rightPowDamage;
         public float RightPowDamage { set { _rightPowDamage = value; } get { return _rightPowDamage; } }
 

@@ -30,7 +30,8 @@ public class PlayerStat : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.KeypadEnter))
         {
-            HitDamage(Random.Range(5, 15));
+            UtilityManager.Instance.AttackPlayer(50);
+            //HitDamage(Random.Range(5, 15));
         }
     }
 
@@ -49,7 +50,7 @@ public class PlayerStat : MonoBehaviour
             isDie = true;
         }
     }
-
+     
     public bool IsDead() { return isDie; }
 
     IEnumerator corHitEffect()
