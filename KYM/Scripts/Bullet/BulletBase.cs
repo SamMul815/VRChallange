@@ -29,12 +29,10 @@ public class BulletBase : Bullet {
                 Debug.Log("HitIce");
                 //break;
             }
-            if(_col.tag == "WeakPoint")
+            if(_col.tag == "DragonHit")
             {
                 EventManager.Instance.DragonHit(_col, damage);
             }
-            
-
         }
         if(hitInfo.Length > 0)
         EventManager.Instance.EventBulletExplosion(collisionParticle,hitInfo[0].point,hitInfo[0].normal);

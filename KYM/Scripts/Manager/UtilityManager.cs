@@ -17,13 +17,18 @@ public class UtilityManager :  Singleton<UtilityManager>
 
     [SerializeField] private TestShakePlayer Shake;
 
+    private PlayerStat playerStat;
+
     public Vector3 PlayerPosition() { return Player.transform.position; }
     public Vector3 DragonPosition() { return Dragon.transform.position; }
 
     public Transform PlayerTransform() { return Player.transform; }
     public Transform DragonTransform() { return Dragon.transform; }
 
-    
+    public void AttackPlayer(float damage)
+    {
+        playerStat.HitDamage(damage);
+    }
 
     public void ShakePlayer()
     {
