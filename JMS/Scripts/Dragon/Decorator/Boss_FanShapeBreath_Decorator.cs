@@ -38,7 +38,6 @@ public class Boss_FanShapeBreath_Decorator : DecoratorTask
         }
         if (NodeState != TASKSTATE.FAULURE)
         {
-            Debug.Log("test");
             OnEnd();
         }
 

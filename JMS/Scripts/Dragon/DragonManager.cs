@@ -42,17 +42,12 @@ namespace DragonController
         // Use this for initialization
         void Start ()
         {
-
             if (Application.isPlaying)
             {
                 CoroutineManager.DoCoroutine(_dragonAiCor);
                 _isInit = true;
-
             }
-		
 	    }
-
-
 
         public bool IsFindNode(MOVEMENTTYPE Type)
         {

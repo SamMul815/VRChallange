@@ -9,17 +9,16 @@ public class EventManager : Singleton<EventManager>
 
     public void DragonHit(Collider col, float damage)
     {
-
-            if (IsWeakPointHit != null)
+        if (IsWeakPointHit != null)
+        {
+            float WeakPointDamage;
+            bool IsHit = IsWeakPointHit(col, out WeakPointDamage);
+            if (IsHit)
             {
-                float WeakPointDamage;
-                bool IsHit = IsWeakPointHit(col, out WeakPointDamage);
-                if (IsHit)
-                {
-                    damage = WeakPointDamage;
-                    BlackBoard.Instance.IsWeakPointAttack = true;
-                }
+                damage = WeakPointDamage;
+                BlackBoard.Instance.IsWeakPointAttack = true;
             }
+        }
 
         DragonManager.Instance.Hit(damage);
     }
@@ -69,6 +68,7 @@ public class EventManager : Singleton<EventManager>
             obj.transform.position = pos;
         }
     }
+
     //void EventIceBlockMake(Vector3 pos)
     //{
 

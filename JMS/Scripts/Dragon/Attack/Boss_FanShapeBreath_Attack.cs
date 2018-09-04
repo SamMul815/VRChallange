@@ -54,7 +54,6 @@ public class Boss_FanShapeBreath_Attack : ActionTask
         {
             BulletManager.Instance.CreateDragonBaseBullet(DragonMouth.position - DragonMouth.up * 2, (DragonMouth.forward + DragonMouth.right * (i-6) / 12.0f).normalized);
         }
-        Debug.Log("test");
         yield return CoroutineManager.GetWaitForSeconds(runTime);
 
         OnEnd();
