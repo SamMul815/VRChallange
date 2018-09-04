@@ -34,13 +34,13 @@ public class WeakPointManager : Singleton<WeakPointManager>
 
     private void Awake()
     {
-        CreateWeakPoint();
     }
 
     private void Start()
     {
         if (Application.isPlaying)
         {
+            CreateWeakPoint();
             EventManager.Instance.IsWeakPointHit = IsHit;
         }
     }
