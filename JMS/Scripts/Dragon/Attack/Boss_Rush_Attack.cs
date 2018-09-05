@@ -21,7 +21,9 @@ public class Boss_Rush_Attack : ActionTask
 
 
     public override bool Run()
-    { 
+    {
+        float Damage = DragonManager.Stat.RushDamage;
+        DragonManager.Instance.Attack(Damage);
         return false;
     }
 
