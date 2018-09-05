@@ -22,7 +22,11 @@ public class BulletHoming : Bullet
     private float maxHP;
 
     [SerializeField]
+    bool isCollisionParitlce = false;
+
+    [SerializeField]
     PoolObject collisionParticle;
+
 
     private float currentHP;
     //ParticleSystem[] particles;
@@ -58,7 +62,10 @@ public class BulletHoming : Bullet
 
         if (currentHP <= 0.0f)
         {
-
+            if(isCollisionParitlce)
+            {
+                EventManager.Instance.EventBulletExplosion(collisionParticle, this.transform.position);
+            }
             DestoryObject();
         }
     }
@@ -99,7 +106,13 @@ public class BulletHoming : Bullet
         }
 
         if(_isHit)
+        {
+            if (isCollisionParitlce)
+            {
+                EventManager.Instance.EventBulletExplosion(collisionParticle, this.transform.position);
+            }
             PoolManager.Instance.PushObject(this.gameObject);
+        }
         //얼음기둥 생성
     }
 

@@ -457,6 +457,9 @@ MonoBehaviour:
   homingPower: 0
   target: 1
   maxHP: 20
+  isCollisionParitlce: 1
+  collisionParticle: {fileID: 114937607655041324, guid: df60b2ddc86c8894cad52b3182a8ce58,
+    type: 2}
 --- !u!135 &135368139797414950
 SphereCollider:
   m_ObjectHideFlags: 1

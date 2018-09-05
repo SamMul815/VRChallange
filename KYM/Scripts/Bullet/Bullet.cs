@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour {
     protected Vector3 moveDir;             //이동 방향
     protected Vector3 prevPosition;        //이전 위치
     protected RaycastHit[] hitInfo;          //충돌 정보              
-
+    
 
     //초기화
     private void Awake()
