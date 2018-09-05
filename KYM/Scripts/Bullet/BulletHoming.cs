@@ -80,6 +80,11 @@ public class BulletHoming : Bullet
                 continue;
             }
 
+            if(_col.CompareTag("MainCamera"))
+            {
+                UtilityManager.Instance.AttackPlayer(damage);
+            }
+
             _isHit = true;
             break;
         }
