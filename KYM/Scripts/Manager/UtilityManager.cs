@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 /// <summary>
 /// 작성일 : 2018 - 05 - 09
 /// 직상지 : 김영민
@@ -18,6 +18,10 @@ public class UtilityManager :  Singleton<UtilityManager>
     [SerializeField] private TestShakePlayer Shake;
 
     [SerializeField] private PlayerStat playerStat;
+
+    [SerializeField] private Image blackScreenImg;
+    [SerializeField] private Image gameOverImg;
+    [SerializeField] private Image victoryImg;
 
     public Vector3 PlayerPosition() { return Player.transform.position; }
     public Vector3 DragonPosition() { return Dragon.transform.position; }
@@ -72,6 +76,25 @@ public class UtilityManager :  Singleton<UtilityManager>
             return true;
 
         return false;
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine(GameEndEvent(blackScreenImg, gameOverImg));
+    }
+
+    public void GameClear()
+    {
+        StartCoroutine(GameEndEvent(blackScreenImg, victoryImg));
+    }
+
+    IEnumerator GameEndEvent(Image Image1, Image Image2)
+    {
+        Image1.CrossFadeAlpha(1.0f, 3.0f, false);
+
+        yield return new WaitForSeconds(4.0f);
+
+        SceneManager.LoadScene(0);
     }
 
 }
