@@ -7,7 +7,6 @@ public class Boss_LeftPow_Attack_Decorator : DecoratorTask
 
     public override void OnStart()
     {
-        Debug.Log(this.gameObject.name + " : OnStart");
         base.OnStart();
     }
 
