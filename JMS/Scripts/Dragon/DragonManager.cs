@@ -29,7 +29,7 @@ namespace DragonController
         IEnumerator _dragonAiCor;
         
         bool _isInit;
-
+         
         private void Awake()
         {
             _stat = GetComponent<DragonStat>();
@@ -42,17 +42,12 @@ namespace DragonController
         // Use this for initialization
         void Start ()
         {
-
             if (Application.isPlaying)
             {
                 CoroutineManager.DoCoroutine(_dragonAiCor);
                 _isInit = true;
-
-            }
-		
+            } 
 	    }
-
-
 
         public bool IsFindNode(MOVEMENTTYPE Type)
         {
@@ -77,11 +72,11 @@ namespace DragonController
             return false;
         }
 
-        public void Hit(float Damege)
+        public void Hit(float Damage)
         {
-            Stat.SaveTakeDamage += Damege;
-            Stat.HP -= Damege;
-            Debug.Log("Dragon Hit : " + Damege);
+            Stat.SaveTakeDamage += Damage;
+            Stat.HP -= Damage;
+            Debug.Log("Dragon Hit : " + Damage);
         }
         
         IEnumerator StartDragonAI()
@@ -89,6 +84,17 @@ namespace DragonController
             while (!_dragonBehaviroTree.Root.Run())
             {
                 yield return CoroutineManager.FiexdUpdate;
+            }
+        }
+
+        public void Attack(float Damage, GameObject Target)
+        {
+            if (BlackBoard.Instance.IsGroundAttacking)
+            {
+                if (Target.tag == "Player")
+                {
+                    UtilityManager.Instance.AttackPlayer(Damage);
+                }
             }
         }
 

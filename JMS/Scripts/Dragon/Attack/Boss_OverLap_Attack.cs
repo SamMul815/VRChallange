@@ -42,6 +42,8 @@ public class Boss_OverLap_Attack : ActionTask
         Transform Dragon = UtilityManager.Instance.DragonTransform();
         Transform Player = UtilityManager.Instance.PlayerTransform();
 
+        float Damage = DragonManager.Stat.OverLapDamage;
+
         Vector3 DragonPos = Dragon.position;
         Vector3 PlayerPos = Player.position;
 

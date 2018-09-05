@@ -50,6 +50,12 @@ public class Boss_NearHowling_Attack : ActionTask
 
     IEnumerator NearHowlingCor(float preTime, float runTime ,float afterTime)
     {
+        Transform Dragon = UtilityManager.Instance.DragonTransform();
+        Transform Player = UtilityManager.Instance.PlayerTransform();
+
+        float Range = DragonManager.Stat.NearHowlingRange;
+        float Damage = DragonManager.Stat.NearHowlingDamage;
+
         Transform DragonMouth = BlackBoard.Instance.DragonMouth;
         FMODSoundManager.Instance.PlayBossHowling(DragonMouth.position);
 
@@ -60,6 +66,13 @@ public class Boss_NearHowling_Attack : ActionTask
 
         //런
         DragonAniManager.SwicthAnimation("NearHowling_Atk_Run");
+
+        UtilityManager.Instance.ShakePlayerHowling();
+
+        if (UtilityManager.DistanceCalc(Dragon, Player, Range))
+        {
+            UtilityManager.Instance.AttackPlayer(Damage);
+        }
         yield return CoroutineManager.GetWaitForSeconds(runTime);
 
         //후딜

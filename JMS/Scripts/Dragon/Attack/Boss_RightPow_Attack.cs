@@ -50,6 +50,8 @@ public class Boss_RightPow_Attack : ActionTask
         Transform Dragon = UtilityManager.Instance.DragonTransform();
         Transform Player = UtilityManager.Instance.PlayerTransform();
 
+        float Damage = DragonManager.Stat.LeftPowDamage;
+
         Vector3 DragonPos = Dragon.position;
         Vector3 PlayerPos = Player.position;
 

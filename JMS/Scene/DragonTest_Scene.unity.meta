@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 37d512ce663bd4340a359f07cfaf6222
+<<<<<<< HEAD
 timeCreated: 1536078776
+=======
+timeCreated: 1536066792
+>>>>>>> origin/MinSu
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

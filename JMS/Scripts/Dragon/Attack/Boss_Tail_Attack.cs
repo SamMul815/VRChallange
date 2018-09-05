@@ -41,6 +41,12 @@ public class Boss_Tail_Attack : ActionTask
 
     IEnumerator TailAttackCor(float preTime, float runTime ,float afterTime)
     {
+        Transform Dragon = UtilityManager.Instance.DragonTransform();
+        Transform Player = UtilityManager.Instance.PlayerTransform();
+
+        float Range = DragonManager.Stat.NearHowlingRange;
+        float Damage = DragonManager.Stat.NearHowlingDamage;
+
         Transform DragonMouth = BlackBoard.Instance.DragonMouth;
         FMODSoundManager.Instance.PlayBossHowling(DragonMouth.position);
 
@@ -48,12 +54,22 @@ public class Boss_Tail_Attack : ActionTask
         DragonAniManager.SwicthAnimation("NearHowling_Atk_Pre");
         yield return CoroutineManager.GetWaitForSeconds(preTime);
 
+<<<<<<< HEAD
         //런
         UtilityManager.Instance.ShakePlayerHowling();
 
 
 
+=======
+        //런        
+>>>>>>> origin/MinSu
         DragonAniManager.SwicthAnimation("NearHowling_Atk_Run");
+
+        UtilityManager.Instance.ShakePlayerHowling();
+
+        if (UtilityManager.DistanceCalc(Dragon, Player, Range))
+            UtilityManager.Instance.AttackPlayer(Damage);
+
         yield return CoroutineManager.GetWaitForSeconds(runTime);
 
         //후딜
