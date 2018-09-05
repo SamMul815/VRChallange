@@ -370,6 +370,10 @@ Prefab:
       propertyPath: m_TagString
       value: DragonHit
       objectReference: {fileID: 0}
+    - target: {fileID: 1406852581926336, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
   m_IsPrefabParent: 0
@@ -683,4 +687,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e60349bda3ddf40981ab3896360b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
