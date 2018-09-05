@@ -6,7 +6,6 @@ public class Boss_SecondAttacks_Decorator : DecoratorTask
 {
     public override void OnStart()
     {
-        Debug.Log(this.gameObject.name + " : OnStart");
         base.OnStart();
     }
 
@@ -39,7 +38,6 @@ public class Boss_SecondAttacks_Decorator : DecoratorTask
 
     public override void OnEnd()
     {
-        Debug.Log(this.gameObject.name + " : OnEnd");
         base.OnEnd();
     }
 }

@@ -9,8 +9,8 @@ public class DragonAttackTrigger : MonoBehaviour
     public string AttackTag { get { return _attackTag; } }
 
     [SerializeField]
-    private float _damege;
-    public float Damege { get { return _damege; } }
+    private float _damage;
+    public float Damage { get { return _damage; } }
 
     Collider[] _attackTriggerColliders;
 
@@ -41,7 +41,7 @@ public class DragonAttackTrigger : MonoBehaviour
     {
         if (other.tag == "MainCamera")//MainCamera --> PlayerTag
         {
-            UtilityManager.Instance.AttackPlayer(_damege);
+            UtilityManager.Instance.AttackPlayer(_damage);
             for (int i = 0; i < _attackTriggerColliders.Length; i++)
                 _attackTriggerColliders[i].enabled = false;
             this.enabled = false;

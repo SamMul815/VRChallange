@@ -48,8 +48,6 @@ public class Boss_Rush_Decorator : DecoratorTask
 
     public override void OnEnd()
     {
-
-        Debug.Log(this.gameObject.name + " : OnEnd");
         base.OnEnd();
     }
 
