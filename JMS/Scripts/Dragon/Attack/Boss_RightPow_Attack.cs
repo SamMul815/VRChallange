@@ -22,7 +22,8 @@ public class Boss_RightPow_Attack : ActionTask
 
     public override bool Run()
     {
-
+        float Damage = DragonManager.Stat.RightPowDamage;
+        DragonManager.Instance.Attack(Damage);
         return false;
     }
 

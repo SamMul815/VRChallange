@@ -22,6 +22,9 @@ public class Boss_OverLap_Attack : ActionTask
 
     public override bool Run()
     {
+        float Damage = DragonManager.Stat.OverLapDamage;
+        DragonManager.Instance.Attack(Damage);
+
         return false;
     }
 

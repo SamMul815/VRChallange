@@ -87,11 +87,13 @@ namespace DragonController
             }
         }
 
-        public void Attack(float Damage, GameObject Target)
+        public void Attack(float Damage)
         {
             if (BlackBoard.Instance.IsGroundAttacking)
             {
-                if (Target.tag == "Player")
+                Transform  Player = UtilityManager.Instance.PlayerTransform();
+                
+                if (Player.tag == "Player")
                 {
                     UtilityManager.Instance.AttackPlayer(Damage);
                 }
