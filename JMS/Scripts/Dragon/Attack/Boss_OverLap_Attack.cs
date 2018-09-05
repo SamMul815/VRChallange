@@ -17,14 +17,13 @@ public class Boss_OverLap_Attack : ActionTask
 
         ActionCor = OverLapAttackCor(preTime, runTime, afterTime);
 
+        BlackBoard.Instance.DragonAttackTriggers["Rush"][0].OnAttackTrigger();
+
         base.OnStart();
     }
 
     public override bool Run()
     {
-        float Damage = DragonManager.Stat.OverLapDamage;
-        DragonManager.Instance.Attack(Damage);
-
         return false;
     }
 

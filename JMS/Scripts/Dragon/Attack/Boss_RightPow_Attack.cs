@@ -16,14 +16,16 @@ public class Boss_RightPow_Attack : ActionTask
         BlackBoard.Instance.IsRightPowAttacking = true;
 
         ActionCor = RightPowAttackCor(preTime, runTime, afterTime);
+        BlackBoard.Instance.DragonAttackTriggers["RightPow"][0].OnAttackTrigger();
+
+
+        //켜준다. --> RightPow 켜준다.
 
         base.OnStart();
     }
 
     public override bool Run()
     {
-        float Damage = DragonManager.Stat.RightPowDamage;
-        DragonManager.Instance.Attack(Damage);
         return false;
     }
 

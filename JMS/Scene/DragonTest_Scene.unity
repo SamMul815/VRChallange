@@ -178,14 +178,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
-<<<<<<< HEAD
-=======
---- !u!4 &357451397 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4471824667729780, guid: e4213ddc35dddcd43a17a667077d8c2a,
-    type: 2}
-  m_PrefabInternal: {fileID: 372210426}
->>>>>>> origin/MinSu
 --- !u!1001 &372210426
 Prefab:
   m_ObjectHideFlags: 0
@@ -247,11 +239,6 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
-  m_IsPrefabParent: 0
-=======
     - target: {fileID: 114769433699221476, guid: e4213ddc35dddcd43a17a667077d8c2a,
         type: 2}
       propertyPath: _nearHowlingRange
@@ -340,7 +327,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4880895119932376, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4908517421031032, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
       propertyPath: m_RootOrder
@@ -368,7 +355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4762194959378046, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4146717623331784, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -382,6 +369,20 @@ Prefab:
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 114920873304844938, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: playerStat
+      value: 
+      objectReference: {fileID: 1747204807}
+    - target: {fileID: 65855287158898072, guid: e4213ddc35dddcd43a17a667077d8c2a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879829533638606, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4213ddc35dddcd43a17a667077d8c2a, type: 2}
   m_IsPrefabParent: 0
@@ -390,66 +391,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4712893830989186, guid: e4213ddc35dddcd43a17a667077d8c2a,
     type: 2}
   m_PrefabInternal: {fileID: 372210426}
---- !u!4 &372210428 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4306653256944324, guid: e4213ddc35dddcd43a17a667077d8c2a,
-    type: 2}
-  m_PrefabInternal: {fileID: 372210426}
---- !u!1 &409044179
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 409044180}
-  - component: {fileID: 409044181}
-  - component: {fileID: 409044182}
-  m_Layer: 10
-  m_Name: RightPowAttack
-  m_TagString: DragonAttack
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &409044180
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 409044179}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 372210428}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &409044181
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 409044179}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.65
-  m_Center: {x: 0, y: -0.49, z: 0}
---- !u!136 &409044182
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 409044179}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.22
-  m_Height: 3.5
-  m_Direction: 0
-  m_Center: {x: -1.8, y: -0.15, z: 0}
 --- !u!4 &513487041 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4880895119932376, guid: e4213ddc35dddcd43a17a667077d8c2a,
@@ -465,6 +406,7 @@ GameObject:
   - component: {fileID: 907359044}
   - component: {fileID: 907359046}
   - component: {fileID: 907359045}
+  - component: {fileID: 907359047}
   m_Layer: 10
   m_Name: LeftPowAttack
   m_TagString: DragonAttack
@@ -509,6 +451,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.4, y: 1.84, z: 4.5}
   m_Center: {x: -2.9, y: 0.19, z: -0.05}
+--- !u!114 &907359047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907359043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d2c3a723441a443831a2ecae492b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackTag: LeftPow
+  _damege: 5
 --- !u!1 &1258108974
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +474,7 @@ GameObject:
   - component: {fileID: 1258108975}
   - component: {fileID: 1258108977}
   - component: {fileID: 1258108976}
+  - component: {fileID: 1258108978}
   m_Layer: 10
   m_Name: RightPowAttack
   m_TagString: DragonAttack
@@ -564,6 +520,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.2
   m_Center: {x: 0.12, y: -0.3, z: 0.09}
+--- !u!114 &1258108978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1258108974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d2c3a723441a443831a2ecae492b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackTag: RightPow
+  _damege: 5
 --- !u!1 &1309559088
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309559089}
   - component: {fileID: 1309559090}
+  - component: {fileID: 1309559091}
   m_Layer: 11
   m_Name: RushAttack
   m_TagString: DragonAttack
@@ -605,6 +575,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.5, y: 10, z: 15}
   m_Center: {x: 0, y: 5, z: 4}
+--- !u!114 &1309559091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309559088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d2c3a723441a443831a2ecae492b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackTag: Rush
+  _damege: 15
 --- !u!4 &1670015403 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4762194959378046, guid: e4213ddc35dddcd43a17a667077d8c2a,
@@ -637,66 +620,8 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1747204806}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1945715728
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1945715729}
-  - component: {fileID: 1945715730}
-  - component: {fileID: 1945715732}
-  m_Layer: 10
-  m_Name: LeftPowAttack
-  m_TagString: DragonAttack
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1945715729
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1945715728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 357451397}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1945715730
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1945715728}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.65
-  m_Center: {x: 0, y: -0.49, z: 0}
---- !u!114 &1945715732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1945715728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e60349bda3ddf40981ab3896360b2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  _damage: 10
->>>>>>> origin/MinSu
-=======
->>>>>>> origin/MinSu
