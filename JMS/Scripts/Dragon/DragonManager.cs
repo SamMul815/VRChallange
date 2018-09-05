@@ -92,7 +92,7 @@ namespace DragonController
             if (BlackBoard.Instance.IsGroundAttacking)
             {
                 Transform  Player = UtilityManager.Instance.PlayerTransform();
-
+                
                 if (Player.tag == "Player")
                 {
                     UtilityManager.Instance.AttackPlayer(Damage);
