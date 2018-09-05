@@ -54,7 +54,7 @@ public class Boss_Tail_Attack : ActionTask
         DragonAniManager.SwicthAnimation("NearHowling_Atk_Pre");
         yield return CoroutineManager.GetWaitForSeconds(preTime);
 
-        //런
+        //런        
         DragonAniManager.SwicthAnimation("NearHowling_Atk_Run");
 
         UtilityManager.Instance.ShakePlayerHowling();

@@ -33,39 +33,20 @@ public class DragonAttackTrigger : MonoBehaviour
     public void OnAttackTrigger()
     {
         for (int i = 0; i < _attackTriggerColliders.Length; i++)
-        {
             _attackTriggerColliders[i].enabled = true;
-        }
         this.enabled = true;
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "MainCamera")//MainCamera --> PlayerTag
         {
-            //UtilityManager.Instance.AttackPlayer(_damage);
-            //for (int i = 0; i < _attackTriggerColliders.Length; i++)
-            //{
-            //    Debug.Log(_attackTriggerColliders[i]);
-            //    _attackTriggerColliders[i].enabled = false;
-            //}
-            //this.enabled = false;
-        }
-
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "MainCamera")
-        {
             UtilityManager.Instance.AttackPlayer(_damage);
             for (int i = 0; i < _attackTriggerColliders.Length; i++)
-            {
                 _attackTriggerColliders[i].enabled = false;
-            }
             this.enabled = false;
         }
+
     }
 
 }
