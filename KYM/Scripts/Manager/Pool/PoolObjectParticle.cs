@@ -30,6 +30,4 @@ public class PoolObjectParticle : PoolObject
     {
         currentTime = waitTime;
     }
-
-
 }

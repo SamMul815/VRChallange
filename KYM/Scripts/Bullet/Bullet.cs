@@ -85,7 +85,6 @@ public class Bullet : MonoBehaviour {
         Move();
         bool _isCollision = CollisionCheck();
         if (_isCollision) OnCollisionEvent();
-
     }
 
     private void OnDrawGizmos()

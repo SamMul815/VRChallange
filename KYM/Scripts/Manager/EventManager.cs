@@ -69,6 +69,9 @@ public class EventManager : Singleton<EventManager>
         }
     }
 
+
+    //public void EventDragonBulletExplosion;
+
     //void EventIceBlockMake(Vector3 pos)
     //{
 

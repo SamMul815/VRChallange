@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ 터질때 collisionParticle 있으면 띄워주기
+     */
 public class BulletHoming : Bullet
 {
     enum TargetName
@@ -17,6 +20,9 @@ public class BulletHoming : Bullet
     private TargetName target;
     [SerializeField]
     private float maxHP;
+
+    [SerializeField]
+    PoolObject collisionParticle;
 
     private float currentHP;
     //ParticleSystem[] particles;
@@ -51,7 +57,10 @@ public class BulletHoming : Bullet
             targetPosition = Vector3.zero;
 
         if (currentHP <= 0.0f)
+        {
+
             DestoryObject();
+        }
     }
 
     protected override void Move()
