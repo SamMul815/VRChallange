@@ -59,6 +59,7 @@ public class UIBox : MonoBehaviour
 
     IEnumerator LoadScene()
     {
+        //Application.backgroundLoadingPriority = UnityEngine.ThreadPriority.Low;
         GameObject[] objects = FindObjectsOfType<GameObject>();
         loading.gameObject.SetActive(true);
         percent.gameObject.SetActive(true);

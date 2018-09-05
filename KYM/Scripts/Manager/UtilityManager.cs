@@ -28,6 +28,7 @@ public class UtilityManager :  Singleton<UtilityManager>
     public void AttackPlayer(float damage)
     {
         playerStat.HitDamage(damage);
+        Debug.Log("player Attack damage: " + damage.ToString());
     }
 
     public void ShakePlayer()
