@@ -74,11 +74,12 @@ public class Boss_NearBreath_Attack : ActionTask
         yield return CoroutineManager.GetWaitForSeconds(preTime);
 
         //실행
-        ParticleManager.Instance.PoolParticleEffectOn("NearBreath");
-        BlackBoard.Instance.DragonAttackTriggers["NearBreath"][0].OnAttackTrigger();
-
+        
         DragonAniManager.SwicthAnimation("NearBreath_Atk_Run");
-        yield return CoroutineManager.GetWaitForSeconds(runTime);
+        ParticleManager.Instance.PoolParticleEffectOn("NearBreath");
+        yield return CoroutineManager.GetWaitForSeconds(0.2f);
+        BlackBoard.Instance.DragonAttackTriggers["NearBreath"][0].OnAttackTrigger();
+        yield return CoroutineManager.GetWaitForSeconds(runTime - 0.2f);
         
         //후딜
         DragonAniManager.SwicthAnimation("NearBreath_Atk_After");
