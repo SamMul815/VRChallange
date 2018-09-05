@@ -87,7 +87,7 @@ namespace DragonController
             }
         }
 
-        public void Attack(float Damage)
+        public void Attack(float Damege)
         {
             if (BlackBoard.Instance.IsGroundAttacking)
             {
@@ -95,7 +95,7 @@ namespace DragonController
 
                 if (Player.tag == "MainCamera")
                 {
-                    UtilityManager.Instance.AttackPlayer(Damage);
+                    UtilityManager.Instance.AttackPlayer(Damege);
                 }
             }
         }

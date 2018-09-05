@@ -17,7 +17,7 @@ public class UtilityManager :  Singleton<UtilityManager>
 
     [SerializeField] private TestShakePlayer Shake;
 
-    private PlayerStat playerStat;
+    [SerializeField] private PlayerStat playerStat;
 
     public Vector3 PlayerPosition() { return Player.transform.position; }
     public Vector3 DragonPosition() { return Dragon.transform.position; }

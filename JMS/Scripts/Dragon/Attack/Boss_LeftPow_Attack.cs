@@ -15,14 +15,12 @@ public class Boss_LeftPow_Attack : ActionTask
         BlackBoard.Instance.IsLeftPowAttacking = true;
 
         ActionCor = LefrPowAttackCor(preTime, runTime, afterTime);
-
+        BlackBoard.Instance.DragonAttackTriggers["LeftPow"][0].OnAttackTrigger();
         base.OnStart();
     }
 
     public override bool Run()
     {
-        float Damage = DragonManager.Stat.LeftPowDamage;
-        DragonManager.Instance.Attack(Damage);
 
         return false;
     }

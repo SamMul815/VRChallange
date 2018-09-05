@@ -16,14 +16,14 @@ public class Boss_Rush_Attack : ActionTask
 
         ActionCor = RushAttackCor(preTime, runTime, afterTime);
 
+        BlackBoard.Instance.DragonAttackTriggers["Rush"][0].OnAttackTrigger();
+
         base.OnStart();
     }
 
 
     public override bool Run()
     {
-        float Damage = DragonManager.Stat.RushDamage;
-        DragonManager.Instance.Attack(Damage);
         return false;
     }
 

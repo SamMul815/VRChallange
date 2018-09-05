@@ -14,6 +14,9 @@ public class BlackBoard : Singleton<BlackBoard>
     [Space]
     [Header("Boss Body Transform")]
 
+    private Dictionary<string, List<DragonAttackTrigger>> _dragonAttackTriggers = new Dictionary<string, List<DragonAttackTrigger>>();
+    public Dictionary<string, List<DragonAttackTrigger>> DragonAttackTriggers { get { return _dragonAttackTriggers; } }
+
     [SerializeField]
     private Transform _dragonMouth;
     public Transform DragonMouth { get { return _dragonMouth; } }
@@ -223,16 +226,44 @@ public class BlackBoard : Singleton<BlackBoard>
     private bool _isWeakPointAttack;
     public bool IsWeakPointAttack { set { _isWeakPointAttack = value; } get { return _isWeakPointAttack; } }
     
-
-    [Header("PlayerHP Dummy")]
-    /* 나중에 지워야 됨!!! */
-    public float PlayerMaxHP;
-    public float CurPlayerHP;
-
     public void Awake()
     {
         _isGround = true;
         _clocks = GetComponentInChildren<Clock>();
+
+        DragonAttackTrigger[] _attackTriggers = DragonManager.Instance.GetComponentsInChildren<DragonAttackTrigger>();
+
+        foreach(DragonAttackTrigger trigger in _attackTriggers)
+        {
+            AddDragonAttackTrigger(trigger, trigger.AttackTag);
+        }
+
+    }
+
+    private List<DragonAttackTrigger> GetDragonAttackTriggerList(string key)
+    {
+        List<DragonAttackTrigger> attackTriggers;
+        if (_dragonAttackTriggers.ContainsKey(key))
+        {
+            attackTriggers = _dragonAttackTriggers[key];
+        }
+        else
+        {
+            attackTriggers = new List<DragonAttackTrigger>();
+            _dragonAttackTriggers[key] = attackTriggers;
+        }
+        return attackTriggers;
+    }
+
+    public void AddDragonAttackTrigger(DragonAttackTrigger addAttackTrigger, string key)
+    {
+        List<DragonAttackTrigger> attackTriggers = GetDragonAttackTriggerList(key);
+        if (!attackTriggers.Contains(addAttackTrigger))
+        {
+            attackTriggers.Add(addAttackTrigger);
+            return;
+        }
+        return;
     }
 
     public Clock.GroundTimes GetGroundTime()
