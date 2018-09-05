@@ -41,7 +41,6 @@ public class DragonAttackTrigger : MonoBehaviour
     {
         if (other.tag == "MainCamera")//MainCamera --> PlayerTag
         {
-            Debug.Log(this.gameObject.name);
             UtilityManager.Instance.AttackPlayer(_damege);
             for (int i = 0; i < _attackTriggerColliders.Length; i++)
                 _attackTriggerColliders[i].enabled = false;
